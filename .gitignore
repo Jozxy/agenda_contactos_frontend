@@ -1,0 +1,21 @@
+# Dependencias
+node_modules/
+
+# Build output
+dist/
+
+# Caché de Vite
+.cache/
+.vite/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Variables de entorno
+.env
+.env.local
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
