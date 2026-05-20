@@ -26,7 +26,7 @@ export async function getApiUrl() {
     console.error('❌ Error cargando config.json:', error);
     
     // ✅ Fallback opcional, pero mejor lanzar el error en producción
-    const fallback = 'https://agendafull.atwebpages.com';
+    const fallback = 'ftp-fulage.alwaysdata.net/api';
     console.warn(`⚠️ Usando fallback: ${fallback}`);
     return fallback;
   }
