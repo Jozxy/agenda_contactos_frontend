@@ -10,7 +10,7 @@ export async function getApiUrl() {
       : `${basePath}config.json`;
     
     // URL completa para GitHub Pages
-    const configUrl = 'https://agendacompleto.infinityfree.me';
+    const configUrl = 'https://agendafull.atwebpages.com';
     
     console.log('🔍 Buscando config.json en:', configUrl);
     
@@ -25,12 +25,12 @@ export async function getApiUrl() {
     const config = await response.json();
     console.log('✅ API_URL cargada:', config.API_URL);
     
-    return 'https://agendacompleto.infinityfree.me';
+    return 'https://agendafull.atwebpages.com';
     
   } catch (error) {
     console.error('❌ Error cargando config.json:', error);
     
-    return 'https://agendacompleto.infinityfree.me';
+    return 'https://agendafull.atwebpages.com';
   }
 }
 
