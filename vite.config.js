@@ -1,18 +1,9 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import { copyFileSync } from 'fs';
 
 export default defineConfig({
-  plugins: [
-    vue(),
-    {
-      name: 'copy-config',
-      writeBundle() {
-        copyFileSync('public/config.json', 'dist/config.json');
-      }
-    }
-  ],
+  plugins: [vue()],
   base: '/agenda_contactos_frontend/',
   resolve: {
     alias: {
@@ -21,6 +12,11 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    assetsDir: 'assets'
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined // Evita conflictos de chunking
+      }
+    }
   }
 });
